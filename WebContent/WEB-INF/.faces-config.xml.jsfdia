@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PROCESS model-entity="JSFProcess">
+ <PROCESS-ITEM
+  NAME="rules:#Ders57_ImplicitNavigationFacesRedirect.xhtml"
+  PATH="/Ders57_ImplicitNavigationFacesRedirect.xhtml" SHAPE="32,17,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM
+   ID="rules:#Ders57_ImplicitNavigationFacesRedirect.xhtml:0"
+   NAME="item" PATH="/Ders57_ImplicitNavigationFacesRedirect.xhtml" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="success::#admin#admin.xhtml" NAME="output"
+    PATH="/admin/admin.xhtml" TARGET="rules:#admin#admin.xhtml"
+    TITLE="success" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="fail::#admin#fail.xhtml" NAME="output1"
+    PATH="/admin/fail.xhtml" TARGET="rules:#admin#fail.xhtml"
+    TITLE="fail" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#admin#admin.xhtml" PATH="/admin/admin.xhtml"
+  SHAPE="240,33,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#admin#fail.xhtml" PATH="/admin/fail.xhtml"
+  SHAPE="256,177,0,0" model-entity="JSFProcessGroup"/>
+</PROCESS>

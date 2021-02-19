@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<faces-config xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_2.xsd"
+	version="2.2">
+	<!-- @ManagedBean(name="student") @SessionScoped -->
+	<managed-bean>
+		<managed-bean-name>student</managed-bean-name>
+		<managed-bean-class>com.hamit.bean.Bean3_ManagedBean</managed-bean-class>
+		<managed-bean-scope>request</managed-bean-scope>
+	</managed-bean>
+
+	<!-- ARpa -->
+	<application>
+		<resource-bundle>
+			<description>Tek bir kelime yazmak</description>
+			<base-name>com.hamit.properties.ResourcesBundleJSF</base-name>
+			<var>tekno</var>
+		</resource-bundle>
+
+		<resource-bundle>
+			<base-name>com.hamit.properties.malatya</base-name>
+			<var>malatya</var>
+		</resource-bundle>
+
+		<locale-config>
+			<default-locale>de_DE</default-locale>
+		</locale-config>
+	</application>
+
+	<!--NaFtaliN FİT-->
+	<navigation-rule>
+		<description>yonlendirme sayfam</description>
+		<from-view-id>/Ders57_ImplicitNavigationFacesRedirect.xhtml</from-view-id>
+		<navigation-case>
+			<from-outcome>success</from-outcome>
+			<if>#{login.adminResult}</if>
+			<to-view-id>/admin/admin.xhtml</to-view-id>
+		</navigation-case>
+		<navigation-case>
+			<from-outcome>fail</from-outcome>
+			<if>#{not login.adminResult}</if>
+			<to-view-id>/admin/fail.xhtml</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+
+</faces-config>
